@@ -3,11 +3,12 @@ package org.example.actions;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class RegisterAction extends ActionSupport {
+
     private String nombre;
     private String apellidos;
     private String curso;
 
-    // Métodos Getter y Setter
+    // Getters and setters for all properties
     public String getNombre() {
         return nombre;
     }
@@ -32,10 +33,14 @@ public class RegisterAction extends ActionSupport {
         this.curso = curso;
     }
 
-    @Override
     public String execute() {
-        // Lógica para procesar los datos de inscripción (p. ej., guardar en BD)
-        System.out.println("Datos recibidos: Nombre = " + nombre + ", Apellidos = " + apellidos + ", Curso = " + curso);
+        // Logic to process form data (can be replaced with database persistence)
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Apellidos: " + apellidos);
+        System.out.println("Curso: " + curso);
+
+        // You could potentially store the data in a database here
+
         return SUCCESS;
     }
 }
